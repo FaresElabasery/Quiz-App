@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link css bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Link css font awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Link css animate libarary -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Link google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Link css main -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="d-flex justify-content-center align-items-center min-vh-100 flex-column gap-5 ">
+        <div class="position-relative overflow-hidden p-2 rounded-3 ">
+            <h1 class="heading px-4 m-0 py-4 bg-white rounded-3">Quiz App</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <form
+                    class="d-none col-lg-8 offset-lg-2 d-flex flex-column gap-3 animate__animated animate__fadeInBottomLeft">
+                    <div class="form-floating ">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>Any Category</option>
+                            <option value="1">General Knowledge</option>
+                            <option value="2">Math</option>
+                            <option value="3">Computers</option>
+                            <option value="3">Geography</option>
+                        </select>
+                        <label for="floatingSelect">Choose Any Category</label>
+                    </div>
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected value="Easy">Easy</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Hard">Hard</option>
+                        </select>
+                        <label for="floatingSelect">Choose Difficulty Level</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="number" class="form-control" id="floatingInputValue" placeholder="name@example.com"
+                            value="test@example.com" min="1" max="50">
+                        <label for="floatingInputValue">Number of Questions</label>
+                    </div>
+                </form>
+                <section
+                    class=" col-lg-6 offset-lg-3 d-flex flex-column animate__animated animate__zoomIn bg-white p-3 rounded-3 text-center gap-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="bg-green p-2 text-white rounded-2">General Knowledge</span>
+                        <span class="bg-blue p-2 text-white rounded-2">1 of 2</span>
+                    </div>
+                    <h3 id="question">What is your Favorite color ?</h3>
+                    <div class="row g-3">
+                        <div class="col-lg-6">
+                            <button class=" custom-btn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+                                esse sequi numquam nisi accusantium itaque fuga voluptate ex commodi magnam. Eveniet
+                                accusantium dolore iusto natus sequi repellendus veritatis earum eos.</button>
+                        </div>
+                        <div class="col-lg-6">
+                            <button class=" custom-btn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+                                facilis!</button>
+                        </div>
+                        <div class="col-lg-6">
+                            <button class=" custom-btn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+                                facilis!</button>
+                        </div>
+                        <div class="col-lg-6">
+                            <button class=" custom-btn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+                                facilis!</button>
+                        </div>
+                    </div>
+                </section>
+                <section
+                    class="d-none col-lg-4 offset-lg-4 text-white d-flex flex-column animate__animated animate__zoomIn bg-glass p-3 rounded-3 text-center gap-3">
+                    <h3 id="score">Your Score is 16</h3>
+                    <button class="btn btn-danger fs-4 w-75 mx-auto">Play Again</button>
+                </section>
+
+            </div>
+        </div>
+    </main>
+    <!--  js -->
+    <script src="js/index.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
