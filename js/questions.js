@@ -12,15 +12,7 @@ export class Question {
         this.isAnswered = false
 
     }
-    getQuestion() {
-        console.log('index', this.index);
-        console.log('question', this.question);
-        console.log('category', this.category);
-        console.log('questionLen', this.questionLen);
-        console.log('correct_answer', this.correct_answer);
-        console.log('incorrect_answers', this.incorrect_answers);
-        console.log('quizResults', this.allChoices);
-    }
+
     displayQuestion() {
         let cartona = `<div class="animations animate__animated animate__zoomIn  d-flex flex-column bg-white p-3 rounded-3 text-center gap-3 shadow-sm">
                             <div class="d-flex justify-content-between align-items-center">
@@ -50,14 +42,11 @@ export class Question {
     checkAnwser(answer) {
         if (this.isAnswered == true) return;
         if (answer.innerText == this.correct_answer) {
-            console.log('correct');
             answer.classList.add('bg-success');
             answer.classList.add('text-white');
             quiz.score++;
-            console.log(quiz.score);
 
         } else {
-            console.log('wrong');
             answer.classList.add('text-white');
             answer.classList.add('bg-danger');
         }
@@ -90,14 +79,15 @@ export class Question {
     }
     endQuiz() {
         let cartona = `<h3 id="score">Your Score is <span class="score-result"> ${quiz.score} </span> of ${this.questionLen} questions</h3>
-                    <button class="btn btn-danger fs-4 w-75 mx-auto" id='playAgain'>Try Again</button>`
+                    <button class="btn btn-danger fs-4 w-75 mx-auto " id='playAgain'>Try Again</button>`
         quizResult.innerHTML = cartona
         quizResult.classList.remove('d-none')
         quizSection.classList.add('d-none')
         if (quiz.score == this.questionLen) {
-            document.getElementById('score').innerText = `Congratulation 🎉👏
-Perfect Score: ${quiz.score}`
+            document.getElementById('score').innerHTML = `Congratulation 🎉👏
+Perfect Score:<span class='score-result'> ${quiz.score}</span>`
             document.getElementById('playAgain').innerText = 'Play Again'
+            document.querySelector('.confetti').classList.remove('d-none');
         }
         document.getElementById('playAgain').addEventListener('click', () => location.reload())
     }

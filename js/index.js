@@ -14,21 +14,22 @@ export let quiz;
 
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
+    let x;
+    clearTimeout(x)
     if (numOfQuestions.value < 1 || numOfQuestions.value == '') {
         errorAlert.innerText = "Please enter a number greater than 1";
         errorAlert.classList.add("alert-show")
-        // setTimeout(() => {
-        //     errorAlert.classList.remove("alert-show")
-        // }, 3000);
+        x = setTimeout(() => {
+            errorAlert.classList.remove("alert-show")
+        }, 3000);
         return;
     }
-    form.classList.add("d-none")
     quiz = new Quiz(numOfQuestions.value == '' ? 5 : numOfQuestions.value, categoryOption.value == 'any' ? 9 : categoryOption.value, difficultyOption.value);
     quizResults = await quiz.getAllQuestions();
     const question = new Question(0);
     question.displayQuestion();
-    console.log(quizResults);
-    console.log(numOfQuestions.value, categoryOption.value, difficultyOption.value);
+    form.classList.add("d-none")
+
 })
 
 

@@ -10,18 +10,18 @@ export class Quiz {
     async getAllQuestions() {
         try {
             const response = await fetch(`https://opentdb.com/api.php?amount=${this.amount}&category=${this.category}&difficulty=${this.difficulty}`)
+            if (!response.ok) {
+                throw new Error(`${response.status}`)
+            }
             const data = await response.json()
-            console.log(data);
-            console.log(this.amount, this.category, this.difficulty);
-
             return data.results
         } catch (error) {
+            errorAlert.innerText = "Something Went Wrong ! Check network Connection";
             errorAlert.classList.add("alert-show")
-            console.log(error);
         } finally {
-            // setTimeout(() => {
-            //     errorAlert.classList.remove("alert-show")
-            // }, 3000);
+            setTimeout(() => {
+                errorAlert.classList.remove("alert-show")
+            }, 3000);
         }
     }
 }
