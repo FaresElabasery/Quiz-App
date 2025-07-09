@@ -85,7 +85,7 @@ export class Question {
         quizSection.classList.add('d-none')
         if (quiz.score == this.questionLen) {
             document.getElementById('score').innerHTML = `Congratulation 🎉👏
-Perfect Score:<span class='score-result'> ${quiz.score}</span>`
+ <p>Perfect Score:<span class='score-result'> ${quiz.score}</span> </p>`
             document.getElementById('playAgain').innerText = 'Play Again'
             document.querySelector('.confetti').classList.remove('d-none');
         }
