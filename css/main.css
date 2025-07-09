@@ -79,9 +79,54 @@ h3 {
     color: white;
 }
 
+.custom-btn:disabled {
+    background-color: gray;
+    color: white;
+    border: 1px solid gray;
+    cursor: help;
+}
+
 .bg-glass {
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(5px);
+}
+
+.alert {
+    transform: translateY(-100%);
+}
+
+.alert-show {
+    transition: all 0.3s ease-in-out;
+    animation: showAlert 3s ease-in-out;
+}
+
+@keyframes showAlert {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    20% {
+        transform: translateY(0%);
+    }
+
+    80% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+
+}
+
+.score-result {
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    width: 30px;
+    height: 31px;
+    color: red;
+    text-wrap: wrap;
 }
