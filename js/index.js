@@ -17,7 +17,7 @@ form.addEventListener("submit", async (e) => {
     let x;
     clearTimeout(x)
     if (numOfQuestions.value < 1 || numOfQuestions.value == '') {
-        errorAlert.innerText = "Please enter a number greater than 1";
+        errorAlert.innerText = "Please enter a number greater than 0";
         errorAlert.classList.add("alert-show")
         x = setTimeout(() => {
             errorAlert.classList.remove("alert-show")
