@@ -14,7 +14,7 @@ export class Question {
     }
 
     displayQuestion() {
-        let cartona = `<div class="animations animate__animated animate__zoomIn  d-flex flex-column bg-white p-3 rounded-3 text-center gap-3 shadow-sm">
+        let cartona = `<div class="animations animate__animated animate__zoomIn  d-flex flex-column glass-card p-3  text-center gap-3 ">
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="bg-green p-2 text-white rounded-2">${this.category}</span>
                                 <span class="bg-blue p-2 text-white rounded-2">${this.index + 1} of ${this.questionLen}</span>
@@ -79,7 +79,7 @@ export class Question {
     }
     endQuiz() {
         let cartona = `<h3 id="score">Your Score is <span class="score-result"> ${quiz.score} </span> of ${this.questionLen} questions</h3>
-                    <button class="btn btn-danger fs-4 w-75 mx-auto " id='playAgain'>Try Again</button>`
+                    <button class="custom-btn fs-4 w-75 mx-auto " id='playAgain'>Try Again</button>`
         quizResult.innerHTML = cartona
         quizResult.classList.remove('d-none')
         quizSection.classList.add('d-none')
