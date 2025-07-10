@@ -51,9 +51,20 @@
                         </select>
                         <label for="difficultyOption">Choose Difficulty Level</label>
                     </div>
-                    <div class="form-floating">
-                        <input type="number" class="form-control" id="numOfQuestions" placeholder="Number of Questions">
-                        <label for="numOfQuestions">Number of Questions</label>
+                    <div class="position-relative">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="numOfQuestions"
+                                placeholder="Number of Questions">
+                            <label for="numOfQuestions">Number of Questions</label>
+                        </div>
+                        <div class="custom-lable d-flex gap-2">
+                            <input type="radio" id="labelNums1" name="nums" class="d-none">
+                            <label class="badge custom-btn h-100 " for="labelNums1">10</label>
+                            <input type="radio" id="labelNums2" name="nums" class="d-none">
+                            <label class="badge custom-btn h-100 " for="labelNums2">15</label>
+                            <input type="radio" id="labelNums3" name="nums" class="d-none">
+                            <label class="badge custom-btn h-100 " for="labelNums3">20</label>
+                        </div>
                     </div>
                     <button type="submit" class="custom-btn bg-glass fs-4">Start Quiz</button>
                 </form>

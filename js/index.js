@@ -6,6 +6,7 @@ export const errorAlert = document.querySelector("#errorAlert");
 const categoryOption = document.querySelector("#categoryOption");
 const difficultyOption = document.querySelector("#difficultyOption");
 const numOfQuestions = document.querySelector("#numOfQuestions");
+const choices = document.querySelectorAll(".custom-lable label");
 export const quizSection = document.querySelector("#quizSection");
 export const quizResult = document.querySelector("#quizResult");
 const form = document.forms[0];
@@ -24,12 +25,18 @@ form.addEventListener("submit", async (e) => {
         }, 3000);
         return;
     }
+
     quiz = new Quiz(numOfQuestions.value == '' ? 5 : numOfQuestions.value, categoryOption.value == 'any' ? 9 : categoryOption.value, difficultyOption.value);
     quizResults = await quiz.getAllQuestions();
     const question = new Question(0);
     question.displayQuestion();
     form.classList.add("d-none")
 
+})
+choices.forEach((choice) => {
+    choice.addEventListener('click', (e) => {
+        numOfQuestions.value = e.target.innerText
+    })
 })
 
 
