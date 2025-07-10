@@ -75,6 +75,7 @@ h3 {
 
 label {
     color: var(--mauve-color) !important;
+    cursor: pointer;
 }
 
 .form-select:focus,
@@ -85,12 +86,14 @@ label {
     border-bottom: 1px solid var(--blue-color);
     background-color: transparent;
 }
-.custom-lable{
+
+.custom-lable {
     position: absolute;
     top: 0;
-    right:0;
+    right: 0;
     padding: 10px;
 }
+
 /* questions section*/
 .custom-btn {
     background-color: white;
@@ -102,12 +105,14 @@ label {
     height: 100%;
     width: 100%;
 }
-input[type="radio"]:checked +label {
+
+input[type="radio"]:checked+label {
     background-color: var(--mauve-color);
     color: white !important;
     cursor: pointer;
-    box-shadow: 0 0 5px var(--mauve-color);
+    box-shadow: 0 0 10px var(--mauve-color);
 }
+
 .custom-btn:hover {
     background-color: var(--mauve-color);
     color: white !important;
